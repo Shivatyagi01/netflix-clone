@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "Netflix";
+    src: url(./NetflixSans_W_Rg.woff2);
+}
+
+@font-face {
+    font-family: "Netflix Medium";
+    src: url(./NetflixSans_W_Md.woff2);
+}
+
+@font-face {
+    font-family: "Netflix Black";
+    src: url(./NetflixSans_W_Blk.woff2);
+}
