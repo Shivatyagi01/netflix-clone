@@ -6,6 +6,7 @@
 
 body,
 html {
+    background-color: #000000;
     overflow-x: hidden;
 }
 
@@ -22,4 +23,441 @@ html {
 @font-face {
     font-family: "Netflix Black";
     src: url(./NetflixSans_W_Blk.woff2);
+}
+
+a,
+button,
+input {
+    outline: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: calc(83.33333333333334% - 6rem);
+    margin: auto;
+}
+
+header {
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+header .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header-wrapper .logo svg {
+    width: 9.25rem;
+    height: 2.5rem;
+    color: rgb(229, 9, 20);
+    fill: currentColor;
+    display: block;
+
+}
+
+header .header-wrapper .right-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.language-switcher {
+    border-radius: 5px;
+    padding: 10px 10px 10px 20px;
+    border: 1px solid #FFFFFF;
+    position: relative;
+}
+
+.language-switcher .svg-img {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+.language-switcher select {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #FFFFFF;
+}
+
+.header-wrapper .right-header .header-btn {
+    width: auto;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    background: rgb(229, 9, 20);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+/* hero-section */
+.hero-section {
+    background-image: url(./banner.jpg);
+    background-position: center;
+    background-size: cover;
+    border-bottom: 0.5rem solid rgb(35, 35, 35);
+    position: relative;
+}
+
+.hero-section:after {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.hero-section .hero-content {
+    min-height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section .hero-content h1 {
+    font-family: "Netflix Black";
+    font-size: 48px;
+    font-weight: 900;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.hero-section .hero-content h2 {
+    font-family: "Netflix";
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.hero-section .hero-content p {
+    font-family: "Netflix";
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.hero-form {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hero-form input[type=email] {
+    padding: 1rem 1rem;
+    min-height: 16px;
+    min-width: 16px;
+    background: rgba(22, 22, 22, 0.7);
+    border-color: rgba(128, 128, 128, 0.7);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0.25rem;
+    color: #FFFFFF;
+    width: 300px;
+}
+
+.hero-form .submit-btn {
+    line-height: 1;
+    user-select: none;
+    border: 0px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    fill: currentcolor;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    background: rgb(229, 9, 20);
+    color: #FFFFFF;
+}
+
+/* info-sections */
+.info-sections {
+    padding: 60px 0;
+    border-bottom: 0.5rem solid rgb(35, 35, 35);
+}
+
+.info-sections .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.info-content {
+    padding: 50px;
+}
+
+.info-content h2 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #FFFFFF;
+    font-family: "Netflix Black";
+    margin-bottom: 30px;
+}
+
+.info-content p {
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-family: "Netflix";
+}
+
+.info-video {}
+
+.info-video .video-in-tv {
+    position: relative;
+}
+
+.info-video .video-in-tv .tv-image {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.info-video .video-in-tv video {
+    position: absolute;
+    left: 89px;
+    top: 105px;
+    width: 100%;
+    max-width: 73%;
+}
+
+.mobile-device {
+    position: relative;
+}
+
+.mobile-device>img {
+    width: 100%;
+    height: 100%;
+}
+
+.download-box {
+    border: 1px solid #FFFFFF;
+    padding: 0.5rem 0.75rem;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    border: 2px solid rgba(128, 128, 128, 0.7);
+    box-shadow: 0 0 2em 0 rgb(0, 0, 0);
+    border-radius: 0.75rem;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    min-width: 15rem;
+    width: 50%;
+    gap: 20px;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 26%;
+}
+
+.download-box>img.book {
+    height: 5rem;
+    width: auto;
+}
+
+.content p:first-child {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    font-family: "Netflix";
+}
+
+.content p:last-child {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0071eb;
+    font-family: "Netflix";
+}
+
+.download-box img {
+    width: 3rem;
+}
+
+.info-video.device-pile .video-in-tv video {
+    position: absolute;
+    left: 110px;
+    top: 40px;
+    width: 100%;
+    max-width: 64%;
+}
+
+.faqs {
+    padding: 60px 0;
+}
+
+.faqs .title {
+    font-family: "Netflix black";
+    font-weight: 900;
+    font-size: 48px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.accordion .accordion-item {
+    background-color: rgb(45, 45, 45);
+}
+
+.accordion .accordion-item .accordion-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 3px solid #000000;
+}
+
+.accordion .accordion-item .accordion-item-header .accordion-item-header-title {
+    font-family: "Netflix";
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.accordion .accordion-item .accordion-item-header .accordion-item-header-icon {
+    transition: all 0.2s ease-in-out;
+    color: #FFFFFF;
+}
+
+.accordion .accordion-item.open .accordion-item-header .accordion-item-header-icon {
+    transform: rotate(-180deg);
+}
+
+.accordion .accordion-item .accordion-item-description-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    padding: 0 20px;
+}
+
+.accordion .accordion-item.open .accordion-item-description-wrapper {
+    grid-template-rows: 1fr;
+}
+
+.accordion .accordion-item .accordion-item-description-wrapper .accordion-item-description {
+    min-height: 0;
+}
+
+.accordion .accordion-item .accordion-item-description-wrapper .accordion-item-description p {
+    padding: 10px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    font-family: "Netflix";
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.newsletter {
+    text-align: center;
+}
+
+.newsletter p {
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 20px;
+    font-family: "Netflix";
+}
+
+footer,
+footer a {
+    padding: 60px 0;
+    font-family: "Netflix";
+    color: #ffffffb3;
+    font-size: 16px;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+footer .footer-grid ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    list-style: none;
+}
+
+footer .footer-grid ul li {
+    color: #ffffffb3;
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+footer .language-switcher {
+    background-color: rgba(22, 22, 22, 0.7);
+    margin: 20px 0;
+    width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .hero-section .hero-content h2,
+    .hero-section .hero-content p,
+    .info-content h2,
+    .info-content p {
+        text-align: center;
+    }
+
+    .hero-section .hero-content {
+        min-height: 70vh;
+    }
+
+    .hero-section .hero-content h1 {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .info-sections .grid {
+        grid-template-columns: auto;
+    }
+
+    .info-content p {
+        font-size: 18px;
+    }
+
+    .info-content h2 {
+        font-size: 32px;
+    }
+
+    .info-content {
+        padding: 0;
+    }
+
+    .info-sections:nth-child(even) .info-video {
+        order: 1;
+    }
+
+    footer .footer-grid ul {
+        grid-template-columns: auto auto;
+    }
 }
